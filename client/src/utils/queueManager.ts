@@ -6,6 +6,10 @@ type Options = {
 };
 
 export function runQueue(tasks: Task[], options: Options) {
+  if (tasks.length === 0) {
+    return Promise.resolve();
+  }
+
   const { concurrency, ratePerSecond } = options;
 
   let active = 0;

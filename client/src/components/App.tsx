@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { runQueue } from "./queue";
-import { createTask } from "./taskFactory";
+import { runQueue } from "../utils/queueManager";
+import { createTask } from "../taskFactory";
 
 function App() {
   const [value, setValue] = useState(10);
